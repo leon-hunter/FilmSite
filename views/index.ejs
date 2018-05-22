@@ -1,0 +1,21 @@
+<%- include('components/head') %>
+<%- include('header') %>
+<div class="container">
+    <div class="row">
+       <% movies.forEach((item)=>{ %>
+         <div class="col-md-2">
+             <div class="thumbnail">
+                 <a href="/movie/<%= item._id %>">
+                     <img src="<%= item.poster %>" alt="<%= item.title %>">
+                 </a>
+                 <div class="caption">
+                     <h3><%= item.title %></h3>
+                     <a href="/movie/<%= item._id %>",role="button" class="btn btn-primary">观看预告片</a>
+                 </div>
+             </div>
+         </div>
+       <% }) %>
+    </div>
+</div>
+</body>
+</html>
